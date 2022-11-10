@@ -6,3 +6,6 @@ spec:
     targetRevision: main
   ingress:
     host: dev.example.com
+
+ingress:
+    host: dev.example.com
