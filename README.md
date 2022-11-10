@@ -4,7 +4,7 @@ Welcome to the EKS Blueprints Workloads repository.
 
 This repository serves as a sample GitOps configuration repository that is meant to be used with the [Amazon EKS Blueprints CDK Quick Start](https://github.com/aws-quickstart/cdk-eks-blueprints) and [Amazon EKS Blueprints for Terraform](https://github.com/aws-ia/terraform-aws-eks-blueprints).
 
-## Documentation  
+## Documentation
 
 Please refer to the Amazon EKS Blueprints Quick Start [Getting Started](https://aws-quickstart.github.io/cdk-eks-blueprints/getting-started/) guide for details on how to bootstrap an EKS cluster with the workload configuration contained in this repository.
 
@@ -26,14 +26,14 @@ Now we can onboard the applications into our cluster:
 argocd app create dev-apps \
     --dest-namespace argocd  \
     --dest-server https://kubernetes.default.svc  \
-    --repo https://github.com/aws-samples/eks-blueprints-workloads.git \
+    --repo https://github.com/ozbillwang/eks-blueprints-workloads.git \
     --path "multi-repo/argo-app-of-apps/dev"
 ```
 
 To sync app configuration and deploy the workloads, run the following.
 
 ```
-argocd app sync dev-apps 
+argocd app sync dev-apps
 ```
 
 ### Usage for Single Repository example
@@ -44,14 +44,14 @@ To bootstrap an EKS cluster with the configuration that is contained in this rep
 argocd app create dev-apps \
     --dest-namespace argocd  \
     --dest-server https://kubernetes.default.svc  \
-    --repo https://github.com/aws-samples/eks-blueprints-workloads.git \
+    --repo https://github.com/ozbillwang/eks-blueprints-workloads.git \
     --path "envs/dev"
 ```
 
 To sync app configuration and deploy the workloads, run the following.
 
 ```
-argocd app sync dev-apps 
+argocd app sync dev-apps
 ```
 
 ## Repo Structure
